@@ -27,6 +27,8 @@ dependencies {
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    //add the dependency
+    implementation 'com.github.jincrates-lee:pf-library:Tag'
 }
 
 tasks.named('test') {
