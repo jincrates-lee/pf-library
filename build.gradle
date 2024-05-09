@@ -26,13 +26,17 @@ dependencies {
 }
 
 java {
-//    withSourcesJar()
-//    withJavadocJar()
+    withSourcesJar()
+    withJavadocJar()
 }
 
 publishing {
     publications {
         maven(MavenPublication) {
+            groupId = 'com.github.jincrates-lee'
+            artifactId = 'pf-library'
+            version = '1.0.2'
+
             from components.java
         }
     }
