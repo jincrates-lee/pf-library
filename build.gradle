@@ -1,14 +1,14 @@
 apply plugin: 'java'
 apply plugin: 'maven-publish'
 
-group = 'kr.co.petfriends'
-version = '1.0.3'
+allprojects {
+    group = "${projectGroup}"
+    version = "${applicationVersion}"
+    sourceCompatibility = "${javaVersion}"
 
-sourceCompatibility = 17
-targetCompatibility = 17
-
-repositories {
-    mavenCentral()
+    repositories {
+        mavenCentral()
+    }
 }
 
 dependencies {
@@ -21,12 +21,6 @@ java {
     withJavadocJar()
 }
 
-//jar {
-//    archivesBaseName = 'pf-library'
-//    archiveFileName = 'pf-library-1.0.2.jar'
-//    archiveVersion = '1.0.2'
-//}
-
 publishing {
     publications {
         maven(MavenPublication) {
@@ -36,14 +30,10 @@ publishing {
 }
 
 wrapper {
-    gradleVersion = "8.7"
+    gradleVersion = "${gradleVersion}"
     distributionType = Wrapper.DistributionType.ALL
 }
 
 tasks.named('test') {
     useJUnitPlatform()
 }
-
-//tasks.named('generateMetadataFileForMavenPublication') {
-//    dependsOn 'bootJar'
-//}
