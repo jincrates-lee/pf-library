@@ -1,4 +1,4 @@
-package kr.co.petfriends.library.pg.adapter.strategy.portone;
+package kr.co.petfriends.library.pg.adapter.strategy;
 
 import kr.co.petfriends.library.pg.domain.PayGatewayType;
 import kr.co.petfriends.library.pg.domain.PayPrepare;
