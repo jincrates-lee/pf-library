@@ -1,8 +1,5 @@
 package kr.co.petfriends.library.pg.domain;
 
-import lombok.Getter;
-
-@Getter
 public enum PgType {
     PORT_ONE("포트원"),
     TOSS_PAY("토스페이"),
@@ -13,5 +10,9 @@ public enum PgType {
 
     PgType(String description) {
         this.description = description;
+    }
+
+    public String getDescription() {
+        return description;
     }
 }
