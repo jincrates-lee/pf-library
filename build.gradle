@@ -38,10 +38,10 @@ publishing {
     }
 }
 
-wrapper {
-    gradleVersion = "9.0"
-    distributionType = Wrapper.DistributionType.ALL
-}
+//wrapper {
+//    gradleVersion = "9.0"
+//    distributionType = Wrapper.DistributionType.ALL
+//}
 
 tasks.named('test') {
     useJUnitPlatform()
