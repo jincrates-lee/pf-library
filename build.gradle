@@ -1,20 +1,11 @@
-plugins {
-    id 'java'
-    id 'org.springframework.boot' version '3.2.5'
-    id 'io.spring.dependency-management' version '1.1.4'
-    id 'maven-publish' apply(true)
-}
+apply plugin: 'java'
+apply plugin: 'maven-publish'
 
 group = 'kr.co.petfriends'
-version = '1.0.2'
+version = '1.0.3'
+
 sourceCompatibility = 17
 targetCompatibility = 17
-
-configurations {
-    compileOnly {
-        extendsFrom annotationProcessor
-    }
-}
 
 repositories {
     mavenCentral()
@@ -30,11 +21,11 @@ java {
     withJavadocJar()
 }
 
-jar {
-    archivesBaseName = 'pf-library'
-    archiveFileName = 'pf-library-1.0.2.jar'
-    archiveVersion = '1.0.2'
-}
+//jar {
+//    archivesBaseName = 'pf-library'
+//    archiveFileName = 'pf-library-1.0.2.jar'
+//    archiveVersion = '1.0.2'
+//}
 
 publishing {
     publications {
@@ -44,10 +35,15 @@ publishing {
     }
 }
 
+wrapper {
+    gradleVersion = "8.7"
+    distributionType = Wrapper.DistributionType.ALL
+}
+
 tasks.named('test') {
     useJUnitPlatform()
 }
 
-tasks.named('generateMetadataFileForMavenPublication') {
-    dependsOn 'bootJar'
-}
+//tasks.named('generateMetadataFileForMavenPublication') {
+//    dependsOn 'bootJar'
+//}
