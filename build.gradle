@@ -1,14 +1,14 @@
 plugins {
     id 'java'
-    id 'org.springframework.boot' version '2.7.18'
+    id 'org.springframework.boot' version '3.2.5'
     id 'io.spring.dependency-management' version '1.1.4'
     id 'maven-publish' apply(true)
 }
 
 group = 'kr.co.petfriends'
 version = '1.0.0'
-sourceCompatibility = 11
-targetCompatibility = 11
+sourceCompatibility = 17
+targetCompatibility = 17
 
 configurations {
     compileOnly {
@@ -39,7 +39,7 @@ publishing {
 }
 
 wrapper {
-    gradleVersion = "7.5"
+    gradleVersion = "8.7"
     distributionType = Wrapper.DistributionType.ALL
 }
 
