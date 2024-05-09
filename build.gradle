@@ -30,13 +30,15 @@ java {
     withJavadocJar()
 }
 
+jar {
+    archivesBaseName = 'pf-library'
+    archiveFileName = 'pf-library-1.0.2.jar'
+    archiveVersion = '1.0.2'
+}
+
 publishing {
     publications {
         maven(MavenPublication) {
-            groupId = 'com.github.jincrates-lee'
-            artifactId = 'pf-library'
-            version = '1.0.2'
-
             from components.java
         }
     }
