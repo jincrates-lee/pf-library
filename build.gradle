@@ -20,8 +20,8 @@ dependencies {
     // lombok
     compileOnly "org.projectlombok:lombok:${lombokVersion}"
     annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
-    // slf4j
-    implementation "org.slf4j:slf4j-api:${slf4jVersion}"
+    // webclient
+    implementation "org.springframework.boot:spring-boot-starter-webflux:${springBootVersion}"
 }
 
 java {

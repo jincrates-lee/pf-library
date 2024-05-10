@@ -1,1 +1,15 @@
-spring.application.name=library
+server:
+  port: 8090
+
+pg:
+  portone:
+    url: https://api.iamport.kr
+    key:
+    secretKey:
+  settlebank:
+    url: https://tbezauthapi.settlebank.co.kr
+    secretKey: SETTLEBANKISGOODSETTLEBANKISGOOD
+    mercntId:
+  tosspay:
+    url: https://pay.toss.im
+    secretKey:
